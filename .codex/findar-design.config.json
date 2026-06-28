@@ -1,0 +1,66 @@
+{
+  "project": "FINDAR",
+  "design_quality_bar": "industrial premium certification/testing website",
+  "mandatory_context": [
+    "docs/design/README.md",
+    "docs/design/00-design-research.md",
+    "docs/design/01-findar-design-direction.md",
+    "docs/design/02-motion-and-animation.md",
+    "docs/design/03-skeuomorphism-neumorphism-notes.md",
+    "docs/design/04-implementation-checklist.md",
+    ".codex/project-memory.md"
+  ],
+  "css_layout_files": {
+    "shared": "styles.css",
+    "desktop": "styles-desktop.css",
+    "mobile": "styles-mobile.css"
+  },
+  "visual_language": {
+    "preferred": [
+      "dark graphite",
+      "cold light-gray surfaces",
+      "safety yellow action accent",
+      "controlled blue technical accent",
+      "real welding imagery",
+      "technical diagrams",
+      "industrial panels",
+      "productive motion"
+    ],
+    "avoid": [
+      "decorative blinking",
+      "random parallax",
+      "gradient blobs",
+      "low-contrast neumorphism",
+      "cards inside cards",
+      "generic SaaS hero",
+      "playful bounce animations",
+      "unverified header shrink"
+    ]
+  },
+  "motion_rules": {
+    "default_duration_ms": 180,
+    "micro_duration_ms": 110,
+    "large_duration_ms": 280,
+    "preferred_properties": ["transform", "opacity"],
+    "requires_reduced_motion": true
+  },
+  "qa_viewports": [
+    "390x844",
+    "768x1024",
+    "1280x900",
+    "1440x900"
+  ],
+  "header_acceptance": {
+    "desktop_logo_alignment": "container aligned initially, physical viewport left edge when scrolled",
+    "desktop_header_cta": false,
+    "desktop_scroll_cta_behavior": "hero WhatsApp CTA smoothly transforms and docks under scaled left logo when it is about 150px from leaving the top viewport edge",
+    "desktop_docked_cta_width": "same as scaled logo-card width",
+    "mobile_logo_alignment": "left side, safe-area aware",
+    "mobile_header_visual": "edge-to-edge compact semi-transparent medium steel top bar with no top/side viewport gaps and no dead top gap before hero content",
+    "mobile_language_switch_visible": true,
+    "mobile_cta_behavior": "hero WhatsApp CTA becomes bottom fixed and hides near final CTA",
+    "mobile_cta_implementation": "two visual CTA elements: inline hero CTA exits strongly right, mobile-bottom-wa enters from right and exits right near final CTA",
+    "no_hero_overlap": true,
+    "mobile_checked": true
+  }
+}

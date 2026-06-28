@@ -6,13 +6,15 @@
   <title>FINDAR — тестирование сварщиков</title>
   <meta name="description" content="FINDAR — центр практической оценки и тестирования сварщиков в Казахстане." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-desktop.css" media="(min-width: 621px)" />
+  <link rel="stylesheet" href="styles-mobile.css" media="(max-width: 620px)" />
 </head>
 <body>
   <main class="page">
     <section class="hero section-dark">
       <div class="hero-bg"></div>
       <div class="container hero-inner">
-        <div class="hero-top">
+        <div class="site-header" id="siteHeader">
           <div class="logo-card"><img src="assets/findar-logo.png" alt="FINDAR"></div>
           <div class="lang-switch" aria-label="Выбор языка">
             <button type="button" data-lang="kk">KZ</button>
@@ -25,7 +27,7 @@
         <h1>Практическое тестирование сварщиков</h1>
         <p class="lead">Оценка профессиональных навыков с ориентацией на международные требования, современные производственные стандарты и дальнейшее развитие специалиста.</p>
         <div class="hero-actions">
-          <a class="btn primary wa-link" href="#participate">Записаться через WhatsApp</a>
+          <a class="btn primary wa-link hero-wa" href="#participate">Записаться через WhatsApp</a>
           <a class="btn secondary" href="#participate">Как участвовать</a>
         </div>
       </div>
@@ -64,7 +66,7 @@
             <div><b>Практический формат</b><span>Реальные сварочные задания вместо формальной анкеты.</span></div>
             <div><b>Международные требования</b><span>Подходы, близкие к европейской и международной практике.</span></div>
             <div><b>Обратная связь</b><span>Понятный разбор результата, ошибок и зон развития.</span></div>
-            <div><b>Контроль качества</b><span>VT, UT и капиллярный / пенетрантный контроль.</span></div>
+            <div><b>Контроль качества</b><span>VT, UT, PT.</span></div>
             <div><b>Видеоанализ</b><span>Разбор техники, положения горелки и стабильности движения.</span></div>
             <div><b>Развитие</b><span>Ориентир для профессионального роста и подготовки.</span></div>
           </div>
@@ -77,7 +79,7 @@
         <div class="section-head light">
           <div class="block-tag">Блок 2</div>
           <h2>Международный пилотный проект для сварщиков в Казахстане</h2>
-          <p>FINDAR запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.</p>
+          <p><span class="brand-blue">FINDAR</span> запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.</p>
         </div>
         <div class="card project-card">
           <p>Мы приглашаем сварщиков принять участие в практическом мероприятии, где участники смогут проверить свой уровень, выполнить сварочные задания по производственным требованиям и получить профессиональную обратную связь от специалистов.</p>
@@ -92,20 +94,14 @@
         <div class="section-head light">
           <div class="block-tag">Блок 3</div>
           <h2>Как проходит тестирование</h2>
-          <p>Тестирование строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.</p>
+          <p>Тестирование <span class="brand-blue">FINDAR</span> строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.</p>
         </div>
 
         <div class="process-cards">
           <article class="process-card">
-            <div class="weld-svg">
-              <svg viewBox="0 0 240 130" aria-hidden="true"><path d="M24 78 124 28l92 36-101 50z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M52 78l75-36 62 24" fill="none" stroke="currentColor" stroke-width="3"/><path d="M81 80c22-15 49-21 80-19" fill="none" stroke="#ffc400" stroke-width="9" stroke-linecap="round"/><path d="M125 42l37-33" stroke="#ffc400" stroke-width="8" stroke-linecap="round"/><path d="M162 9l18 15" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
-            </div>
             <div class="process-text"><strong>135</strong><h3>MAG — Solid Wire</h3><ul><li>Проволока: G3Si1 Ø1.2 мм</li><li>Газ: M21 Ar + CO₂</li><li>Положения: BW PF, FW PF</li><li>Соединения: ss nb, ml</li></ul></div>
           </article>
           <article class="process-card">
-            <div class="weld-svg">
-              <svg viewBox="0 0 240 130" aria-hidden="true"><path d="M24 78 124 28l92 36-101 50z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M52 78l75-36 62 24" fill="none" stroke="currentColor" stroke-width="3"/><path d="M79 82c25-17 54-23 88-19" fill="none" stroke="#ffc400" stroke-width="9" stroke-linecap="round"/><path d="M127 41l35-32" stroke="#ffc400" stroke-width="8" stroke-linecap="round"/><path d="M162 9l18 15" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>
-            </div>
             <div class="process-text"><strong>136</strong><h3>FCAW — Flux-Cored</h3><ul><li>Проволока: T 50 6 1.5Ni Ø1.2 мм</li><li>Газ: M21 Ar + CO₂</li><li>Положения: BW PF, FW PF</li><li>Соединения: bs, ml</li></ul></div>
           </article>
         </div>
@@ -113,10 +109,22 @@
         <div class="positions">
           <h3>Положения сварки</h3>
           <div class="positions-grid">
-            <div class="position-item"><svg viewBox="0 0 120 80"><path d="M18 48h70l12-30H30z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M50 20l-10 40" stroke="#ffc400" stroke-width="7"/></svg><b>BW PF</b><span>Нижнее положение стыкового соединения</span></div>
-            <div class="position-item"><svg viewBox="0 0 120 80"><path d="M30 58h62V16" fill="none" stroke="currentColor" stroke-width="3"/><path d="M70 16v40" stroke="#ffc400" stroke-width="7"/></svg><b>FW PF</b><span>Нижнее положение углового соединения</span></div>
-            <div class="position-item"><svg viewBox="0 0 120 80"><path d="M16 44h88M25 32h70" stroke="currentColor" stroke-width="3"/><path d="M36 33l58 10" stroke="#ffc400" stroke-width="7"/></svg><b>BW PF bs</b><span>Стыковое соединение с подкладкой и зазором</span></div>
-            <div class="position-item"><svg viewBox="0 0 120 80"><path d="M30 58h62V16" fill="none" stroke="currentColor" stroke-width="3"/><path d="M70 18v40" stroke="#ffc400" stroke-width="7"/></svg><b>FW PF ml</b><span>Угловое соединение, многослойная сварка</span></div>
+            <div class="position-item">
+              <img src="assets/welding-position-bw-pf.png" alt="BW PF" width="1302" height="868" loading="lazy">
+              <b>BW PF</b><span>Нижнее положение стыкового соединения</span>
+            </div>
+            <div class="position-item">
+              <img src="assets/welding-position-fw-pf.png" alt="FW PF" width="1292" height="868" loading="lazy">
+              <b>FW PF</b><span>Нижнее положение углового соединения</span>
+            </div>
+            <div class="position-item">
+              <img src="assets/welding-position-bw-pf-bs.png" alt="BW PF bs" width="1294" height="864" loading="lazy">
+              <b>BW PF bs</b><span>Стыковое соединение с подкладкой и зазором</span>
+            </div>
+            <div class="position-item">
+              <img src="assets/welding-position-fw-pf-ml.png" alt="FW PF ml" width="1298" height="860" loading="lazy">
+              <b>FW PF ml</b><span>Угловое соединение, многослойная сварка</span>
+            </div>
           </div>
         </div>
       </div>
@@ -132,13 +140,6 @@
           <div class="mini-card"><h3>Видеоанализ</h3><p>Разбор процесса сварки: техника, положение горелки, стабильность движения.</p></div>
           <div class="mini-card"><h3>Стандарты и чертежи</h3><p>Базовое понимание требований европейских и международных стандартов.</p></div>
           <div class="mini-card"><h3>Тренинги</h3><p>Обучающие мастер-классы и рекомендации по дальнейшему развитию.</p></div>
-        </div>
-
-        <div class="works">
-          <div class="section-head"><div class="accent-line"></div><h2>Примеры работ</h2></div>
-          <div class="work-grid">
-            <img src="assets/work-1.jpg" alt="Сварной шов"><img src="assets/work-2.jpg" alt="Сварной шов"><img src="assets/work-3.jpg" alt="Сварной шов"><img src="assets/work-4.jpg" alt="Сварной шов"><img src="assets/work-5.jpg" alt="Сварное соединение">
-          </div>
         </div>
 
         <div class="evaluated">
@@ -179,6 +180,8 @@
     </section>
   </main>
 
+  <a class="mobile-bottom-wa wa-link" href="#participate">Записаться через WhatsApp</a>
+
   <script>
     (function () {
 
@@ -217,6 +220,31 @@
       });
       Object.assign(translations.fi, {
         'Международный пилотный проект в Казахстане':'Kansainvälinen pilottihanke Kazakstanissa','Практическое тестирование сварщиков':'Hitsaajien käytännön testaus','Оценка профессиональных навыков с ориентацией на международные требования, современные производственные стандарты и дальнейшее развитие специалиста.':'Ammattitaitojen arviointi kansainvälisten vaatimusten, nykyaikaisten tuotantostandardien ja asiantuntijan jatkokehityksen näkökulmasta.','Записаться через WhatsApp':'Ilmoittaudu WhatsAppissa','Как участвовать':'Kuinka osallistua','Блок 1':'Osa 1','Блок 2':'Osa 2','Блок 3':'Osa 3','FINDAR — центр практической оценки и тестирования сварщиков':'FINDAR — hitsaajien käytännön arviointi- ja testauskeskus','FINDAR — это практическая площадка в Казахстане для оценки, тестирования и развития квалификации сварщиков с ориентацией на международные требования и современные производственные стандарты.':'FINDAR on Kazakstanissa toimiva käytännön alusta hitsaajien pätevyyden arviointiin, testaukseen ja kehittämiseen kansainvälisiä vaatimuksia ja nykyaikaisia tuotantostandardeja painottaen.','Мы проводим практическое тестирование сварщиков в условиях, приближенных к реальному производству: участники выполняют сварочные задания, демонстрируют технику работы, соблюдение требований безопасности и качество выполнения сварных соединений.':'Toteutamme hitsaajien käytännön testauksen tuotantoa muistuttavissa olosuhteissa: osallistujat tekevät hitsaustehtäviä ja osoittavat työtekniikan, turvallisuusvaatimusten noudattamisen sekä hitsausliitosten laadun.','Наша задача — объективно определить текущий уровень специалиста, выявить сильные стороны, показать зоны для улучшения и дать понятные рекомендации для дальнейшего профессионального развития.':'Tavoitteemme on määrittää asiantuntijan nykyinen taso objektiivisesti, tunnistaa vahvuudet, kehitysalueet ja antaa selkeät suositukset ammatilliseen kehitykseen.','Чем мы занимаемся':'Mitä teemme','Наши преимущества':'Etumme','FINDAR помогает сварщикам подготовиться к работе в проектах, где важны качество, дисциплина, стабильность выполнения шва и понимание технических требований.':'FINDAR auttaa hitsaajia valmistautumaan projekteihin, joissa laatu, kurinalaisuus, hitsin tasaisuus ja teknisten vaatimusten ymmärtäminen ovat tärkeitä.','практические навыки сварки;':'käytännön hitsaustaidot;','качество сварных соединений;':'hitsausliitosten laatu;','соблюдение требований безопасности;':'turvallisuusvaatimusten noudattaminen;','умение работать по заданию;':'kyky työskennellä tehtävän mukaan;','понимание производственных стандартов;':'tuotantostandardien ymmärtäminen;','готовность к работе по международным требованиям.':'valmius työskennellä kansainvälisten vaatimusten mukaan.','Практический формат':'Käytännön formaatti','Реальные сварочные задания вместо формальной анкеты.':'Todelliset hitsaustehtävät muodollisen kyselyn sijaan.','Международные требования':'Kansainväliset vaatimukset','Подходы, близкие к европейской и международной практике.':'Eurooppalaista ja kansainvälistä käytäntöä vastaavat lähestymistavat.','Обратная связь':'Palaute','Понятный разбор результата, ошибок и зон развития.':'Selkeä arvio tuloksesta, virheistä ja kehitysalueista.','Контроль качества':'Laadunvalvonta','VT, UT и капиллярный / пенетрантный контроль.':'VT, UT sekä kapillaari- / tunkeumanestetarkastus.','Видеоанализ':'Videoanalyysi','Разбор техники, положения горелки и стабильности движения.':'Tekniikan, polttimen asennon ja liikkeen vakauden analyysi.','Развитие':'Kehitys','Ориентир для профессионального роста и подготовки.':'Suunta ammatilliseen kasvuun ja valmistautumiseen.','Международный пилотный проект для сварщиков в Казахстане':'Kansainvälinen pilottihanke hitsaajille Kazakstanissa','FINDAR запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.':'FINDAR käynnistää Kazakstanissa kansainvälisen pilottihankkeen hitsaajien pätevyyden arvioimiseksi ja kehittämiseksi.','Мы приглашаем сварщиков принять участие в практическом мероприятии, где участники смогут проверить свой уровень, выполнить сварочные задания по производственным требованиям и получить профессиональную обратную связь от специалистов.':'Kutsumme hitsaajia osallistumaan käytännön tapahtumaan, jossa he voivat tarkistaa tasonsa, tehdä tuotantovaatimuksiin perustuvia hitsaustehtäviä ja saada asiantuntijapalautetta.','Проект направлен не только на оценку текущих навыков, но и на дальнейшее развитие сварщиков: понимание требований безопасности, качества сварных соединений, чтения технических заданий, работы по современным производственным стандартам и подготовки к международной практике.':'Hanke keskittyy taitojen arvioinnin lisäksi hitsaajien kehittämiseen: turvallisuusvaatimuksiin, hitsausliitosten laatuun, teknisten tehtävien lukemiseen, nykyaikaisiin tuotantostandardeihin ja kansainväliseen käytäntöön valmistautumiseen.','Лучшие участники смогут быть рассмотрены для дальнейших этапов проекта, профессионального обмена опытом, дополнительной подготовки и участия в международных программах развития.':'Parhaat osallistujat voidaan huomioida hankkeen seuraaviin vaiheisiin, ammatilliseen kokemustenvaihtoon, lisävalmennukseen ja kansainvälisiin kehitysohjelmiin.','Как проходит тестирование':'Miten testaus etenee','Тестирование строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.':'Testaus toteutetaan käytännön taitojen tarkastuksena tuotantoa muistuttavissa olosuhteissa. Formaatti perustuu kansainväliseen käytäntöön, mukaan lukien EN ISO 9606-1 -lähestymistavat.','Проволока: G3Si1 Ø1.2 мм':'Lanka: G3Si1 Ø1.2 mm','Проволока: T 50 6 1.5Ni Ø1.2 мм':'Lanka: T 50 6 1.5Ni Ø1.2 mm','Газ: M21 Ar + CO₂':'Kaasu: M21 Ar + CO₂','Положения: BW PF, FW PF':'Asennot: BW PF, FW PF','Соединения: ss nb, ml':'Liitokset: ss nb, ml','Соединения: bs, ml':'Liitokset: bs, ml','Положения сварки':'Hitsausasennot','Нижнее положение стыкового соединения':'Päittäisliitoksen asento','Нижнее положение углового соединения':'Pienahitsin asento','Стыковое соединение с подкладкой и зазором':'Päittäisliitos tuella ja ilmaraolla','Угловое соединение, многослойная сварка':'Pienaliitos, monipalkohitsaus','Что входит в проект':'Mitä hanke sisältää','Практическая оценка':'Käytännön arviointi','Проверка профессиональных навыков через реальные сварочные задания.':'Ammattitaitojen tarkastus todellisilla hitsaustehtävillä.','Производственные требования':'Tuotantovaatimukset','Выполнение заданий с учетом качества, дисциплины и безопасности.':'Tehtävien suoritus laadun, kurinalaisuuden ja turvallisuuden huomioiden.','Разбор результата, ошибок, техники и дальнейших зон развития.':'Tuloksen, virheiden, tekniikan ja kehitysalueiden analyysi.','Разбор процесса сварки: техника, положение горелки, стабильность движения.':'Hitsausprosessin analyysi: tekniikka, polttimen asento, liikkeen vakaus.','Стандарты и чертежи':'Standardit ja piirustukset','Базовое понимание требований европейских и международных стандартов.':'Perusymmärrys eurooppalaisten ja kansainvälisten standardien vaatimuksista.','Тренинги':'Koulutukset','Обучающие мастер-классы и рекомендации по дальнейшему развитию.':'Koulutustyöpajat ja suositukset jatkokehitykseen.','Примеры работ':'Työnäytteet','Что оценивается':'Mitä arvioidaan','В ходе мероприятия будут оцениваться':'Tapahtumassa arvioidaan','качество выполнения сварных соединений;':'hitsausliitosten toteutuksen laatu;','стабильность техники сварки;':'hitsaustekniikan vakaus;','понимание задания и производственной дисциплины;':'tehtävän ymmärtäminen ja tuotantokuri;','готовность работать по современным производственным стандартам.':'valmius työskennellä nykyaikaisten tuotantostandardien mukaan.','Для более объективной оценки могут применяться визуальный контроль, ультразвуковой контроль и капиллярный / пенетрантный контроль.':'Objektiivisempaan arviointiin voidaan käyttää visuaalista tarkastusta, ultraäänitarkastusta sekä kapillaari- / tunkeumanestetarkastusta.','Количество мест ограничено. Участие проводится по предварительной регистрации.':'Paikkoja on rajoitetusti. Osallistuminen edellyttää ennakkoilmoittautumista.','Как принять участие':'Kuinka osallistua','Чтобы подать заявку, необходимо пройти короткий предварительный отбор.':'Hakemista varten tulee läpäistä lyhyt ennakkoseulonta.','Отправить заявку':'Lähetä hakemus','Нажмите на кнопку и отправьте сообщение в WhatsApp.':'Paina painiketta ja lähetä viesti WhatsAppissa.','Прикрепить резюме':'Liitä CV','Укажите имя, город, опыт, методы сварки, материалы, толщины, чертежи и сертификаты.':'Ilmoita nimi, kaupunki, kokemus, hitsausmenetelmät, materiaalit, paksuudet, piirustukset ja todistukset.','Пройти скрининг':'Osallistu seulontaan','Короткое анкетирование или мини-собеседование для определения уровня подготовки.':'Lyhyt kysely tai minihaastattelu tason määrittämiseksi.','Получить подтверждение':'Saa vahvistus','После скрининга участник получает информацию о формате, дате и группе.':'Seulonnan jälkeen osallistuja saa tiedot formaatista, päivämäärästä ja ryhmästä.','Код участника':'Osallistujakoodi','Скопируйте этот код и укажите его при подаче заявки в WhatsApp. Так мы поймем, что заявка пришла со страницы FINDAR.':'Kopioi tämä koodi ja ilmoita se WhatsApp-hakemuksessa. Näin tiedämme, että hakemus tuli FINDAR-sivulta.','Скопировать код':'Kopioi koodi','Код скопирован':'Koodi kopioitu','Готовы пройти практическое тестирование?':'Valmis käytännön testaukseen?','Запишитесь через WhatsApp и укажите код участника со страницы.':'Ilmoittaudu WhatsAppissa ja lisää sivulla näkyvä osallistujakoodi.','Связаться с нами':'Ota yhteyttä'
+      });
+
+      Object.assign(translations.ru, {
+        'запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.':'запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.',
+        'Тестирование':'Тестирование',
+        'строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.':'строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.',
+        'VT, UT, PT.':'VT, UT, PT.'
+      });
+      Object.assign(translations.en, {
+        'запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.':'is launching an international pilot project for assessment and development of welders’ qualifications in Kazakhstan.',
+        'Тестирование':'Testing',
+        'строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.':'is built as a practical skill check in conditions close to production. The format is oriented toward international practice, including EN ISO 9606-1 approaches.',
+        'VT, UT, PT.':'VT, UT, PT.'
+      });
+      Object.assign(translations.kk, {
+        'запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.':'Қазақстанда дәнекерлеушілердің біліктілігін бағалау және дамыту бойынша халықаралық пилоттық жобаны іске қосады.',
+        'Тестирование':'Тестілеу',
+        'строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.':'өндіріске жақын жағдайларда дәнекерлеушінің дағдыларын практикалық тексеру ретінде құрылады. Формат халықаралық практика талаптарына, соның ішінде EN ISO 9606-1 тәсілдеріне бағытталған.',
+        'VT, UT, PT.':'VT, UT, PT.'
+      });
+      Object.assign(translations.fi, {
+        'запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.':'käynnistää Kazakstanissa kansainvälisen pilottihankkeen hitsaajien pätevyyden arvioimiseksi ja kehittämiseksi.',
+        'Тестирование':'Testaus',
+        'строится как практическая проверка навыков сварщика в условиях, приближенных к производственным. Формат ориентирован на требования международной практики, включая подходы EN ISO 9606-1.':'toteutetaan käytännön taitojen tarkastuksena tuotantoa muistuttavissa olosuhteissa. Formaatti perustuu kansainväliseen käytäntöön, mukaan lukien EN ISO 9606-1 -lähestymistavat.',
+        'VT, UT, PT.':'VT, UT, PT.'
       });
 
       const originalText = new WeakMap();
@@ -293,6 +321,162 @@
         });
       });
       translatePage(savedLang);
+
+      const siteHeader = document.getElementById('siteHeader');
+      const heroWa = document.querySelector('.hero-wa');
+      const heroSecondary = document.querySelector('.hero-actions .secondary');
+      const mobileBottomWa = document.querySelector('.mobile-bottom-wa');
+      const heroActions = document.querySelector('.hero-actions');
+      const finalCta = document.querySelector('.cta .wa-link');
+      const mobileMedia = window.matchMedia('(max-width: 620px)');
+      let heroCtaDockY = 0;
+      let ticking = false;
+      let desktopDocked = false;
+      let mobileFloating = false;
+      let mobileReturnTimer = 0;
+      let mobileLeaveTimer = 0;
+
+      function measureDockPoint() {
+        if (!heroWa) return;
+        const rect = heroWa.getBoundingClientRect();
+        heroCtaDockY = Math.max(0, window.scrollY + rect.top - 150);
+      }
+
+      function isFinalCtaVisible() {
+        if (!finalCta) return false;
+        const rect = finalCta.getBoundingClientRect();
+        return rect.top < window.innerHeight - 24 && rect.bottom > 0;
+      }
+
+      function setDesktopDockState(shouldDock, isMobile) {
+        if (!heroWa) return;
+        if (isMobile) {
+          desktopDocked = false;
+          heroWa.classList.remove('is-docked-desktop');
+          heroWa.style.transition = '';
+          heroWa.style.transform = '';
+          return;
+        }
+        if (shouldDock === desktopDocked) return;
+
+        const first = heroWa.getBoundingClientRect();
+        const secondaryFirst = heroSecondary ? heroSecondary.getBoundingClientRect() : null;
+        heroWa.classList.toggle('is-docked-desktop', shouldDock);
+        const last = heroWa.getBoundingClientRect();
+        const secondaryLast = heroSecondary ? heroSecondary.getBoundingClientRect() : null;
+        const dx = first.left - last.left;
+        const dy = first.top - last.top;
+        const sx = first.width / last.width;
+        const sy = first.height / last.height;
+
+        heroWa.style.transformOrigin = 'left top';
+        heroWa.style.transition = 'none';
+        heroWa.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`;
+        heroWa.getBoundingClientRect();
+        requestAnimationFrame(() => {
+          heroWa.style.transition = '';
+          heroWa.style.transform = '';
+        });
+
+        if (heroSecondary && secondaryFirst && secondaryLast) {
+          const secondaryDx = secondaryFirst.left - secondaryLast.left;
+          const secondaryDy = secondaryFirst.top - secondaryLast.top;
+          if (Math.abs(secondaryDx) > .5 || Math.abs(secondaryDy) > .5) {
+            heroSecondary.style.transformOrigin = 'left top';
+            heroSecondary.style.transition = 'none';
+            heroSecondary.style.transform = `translate(${secondaryDx}px, ${secondaryDy}px)`;
+            heroSecondary.getBoundingClientRect();
+            requestAnimationFrame(() => {
+              heroSecondary.style.transition = '';
+              heroSecondary.style.transform = '';
+            });
+          }
+        }
+
+        desktopDocked = shouldDock;
+      }
+
+      function clearMobileMotionTimers() {
+        clearTimeout(mobileReturnTimer);
+        clearTimeout(mobileLeaveTimer);
+      }
+
+      function syncHeaderState() {
+        const scrolled = window.scrollY > 48;
+        const isMobile = mobileMedia.matches;
+
+        if (siteHeader) siteHeader.classList.toggle('is-compact', scrolled);
+
+        if (heroWa) {
+          const dockDesktop = !isMobile && window.scrollY > heroCtaDockY;
+          const floatMobile = isMobile && scrolled;
+          const hideForFinalCta = floatMobile && isFinalCtaVisible();
+
+          setDesktopDockState(dockDesktop, isMobile);
+
+          if (isMobile) {
+            if (floatMobile) {
+              clearMobileMotionTimers();
+              heroWa.classList.add('is-mobile-inline-out');
+              heroWa.classList.remove('is-mobile-returning');
+              if (mobileBottomWa) {
+                mobileBottomWa.classList.add('is-visible');
+                mobileBottomWa.classList.remove('is-leaving-top');
+                mobileBottomWa.classList.toggle('is-final-hidden', hideForFinalCta);
+              }
+            } else {
+              const shouldPlayReturn = mobileFloating;
+              heroWa.classList.remove('is-mobile-inline-out');
+              heroWa.classList.remove('is-mobile-fixed');
+              heroWa.classList.remove('is-final-hidden');
+              if (shouldPlayReturn) {
+                heroWa.classList.add('is-mobile-returning');
+                clearTimeout(mobileReturnTimer);
+                mobileReturnTimer = setTimeout(() => heroWa.classList.remove('is-mobile-returning'), 380);
+              }
+              if (mobileBottomWa) {
+                mobileBottomWa.classList.remove('is-visible');
+                mobileBottomWa.classList.remove('is-final-hidden');
+                if (shouldPlayReturn) {
+                  mobileBottomWa.classList.add('is-leaving-top');
+                  clearTimeout(mobileLeaveTimer);
+                  mobileLeaveTimer = setTimeout(() => mobileBottomWa.classList.remove('is-leaving-top'), 380);
+                }
+              }
+            }
+            mobileFloating = floatMobile;
+          } else {
+            mobileFloating = false;
+            clearMobileMotionTimers();
+            heroWa.classList.remove('is-mobile-inline-out');
+            heroWa.classList.remove('is-mobile-returning');
+            heroWa.classList.remove('is-mobile-fixed');
+            heroWa.classList.remove('is-final-hidden');
+            if (mobileBottomWa) {
+              mobileBottomWa.classList.remove('is-visible');
+              mobileBottomWa.classList.remove('is-final-hidden');
+              mobileBottomWa.classList.remove('is-leaving-top');
+            }
+          }
+        }
+      }
+
+      function requestSync() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          syncHeaderState();
+          ticking = false;
+        });
+      }
+
+      measureDockPoint();
+      syncHeaderState();
+      window.addEventListener('scroll', requestSync, { passive: true });
+      window.addEventListener('resize', () => {
+        measureDockPoint();
+        requestSync();
+      });
 
       document.getElementById('copyCode').addEventListener('click', async function () {
         const lang = localStorage.getItem('findarLang') || 'ru';
