@@ -37,22 +37,49 @@ function drawJoint() {
       face([top[i],top[next],bottom[next],bottom[i]],['#505e62','#849296','#75868b','#526368'][i],'#aebdc0');
     }
   }
+  function paintLayer() {
+    faces.sort((a,b)=>a.depth-b.depth);
+    for(const {points,color,stroke} of faces) {
+      context.beginPath();
+      points.forEach(([x,y],i)=>i?context.lineTo(x,y):context.moveTo(x,y));
+      context.closePath();
+      if(color===stroke) {
+        context.fillStyle=color;
+      } else {
+        const shade = context.createLinearGradient(0,height,width,0);
+        shade.addColorStop(0,stroke);
+        shade.addColorStop(.38,color);
+        shade.addColorStop(1,color);
+        context.fillStyle=shade;
+      }
+      context.fill();
+      context.strokeStyle=color; context.lineWidth=.65; context.stroke();
+    }
+    faces.length=0;
+  }
   box(-1.85,1.85,-.16,0,-.96,.96);
+  paintLayer();
   box(-1.8,1.8,0,1.03,-.09,.09);
-  // Facets along the weld give the bead its characteristic rippled surface.
-  for(let i=0;i<56;i++) {
-    const x=-1.79+i*.064;
-    const tint=Math.round(146+26*Math.sin(i*1.35));
-    face([[x,.23,.094],[x+.064,.23,.094],[x+.085,.08,.24],[x+.02,.08,.24]],'rgb('+tint+','+(tint+8)+','+(tint+9)+')','#738387');
-    face([[x+.02,.08,.24],[x+.085,.08,.24],[x+.065,.004,.32],[x,.004,.32]],'#818e90','#657679');
+  paintLayer();
+  // The control keeps the camera facing the welded side of the upright.
+  // Draw its continuous bead after the plates to preserve the exposed surface.
+  const stations=144, strips=8;
+  function bead(i,j) {
+    const t=j/strips;
+    const ridge=Math.cos(i*Math.PI/2 - 2.7*Math.sin(t*Math.PI));
+    return [-1.79+3.58*i/stations,
+      .245*(1-t)+(.027+.011*ridge)*Math.sin(Math.PI*t),
+      .091+.245*t+(.027+.011*ridge)*Math.sin(Math.PI*t)];
   }
-  faces.sort((a,b)=>a.depth-b.depth);
-  for(const {points,color,stroke} of faces) {
-    context.beginPath();
-    points.forEach(([x,y],i)=>i?context.lineTo(x,y):context.moveTo(x,y));
-    context.closePath(); context.fillStyle=color; context.fill();
-    context.strokeStyle=stroke; context.lineWidth=.7; context.stroke();
+  for(let i=0;i<stations;i++) {
+    for(let j=0;j<strips;j++) {
+      const shine=Math.cos(i*Math.PI/2-2.7*Math.sin(Math.PI*(j+.5)/strips));
+      const tint=Math.round(128+39*shine+24*Math.sin(Math.PI*(j+.5)/strips));
+      const metal='rgb('+tint+','+(tint+9)+','+(tint+12)+')';
+      face([bead(i,j),bead(i+1,j),bead(i+1,j+1),bead(i,j+1)],metal,metal);
+    }
   }
+  paintLayer();
   control.nextElementSibling.textContent = Math.round(angle)+'°';
 }
 function schedule() {
@@ -66,7 +93,9 @@ if(context) {
   addEventListener('scroll',()=>{
     if(manual || reduced.matches) return;
     const height=document.querySelector('.lab-cover').offsetHeight;
-    angle=-28+48*Math.min(1,Math.max(0,scrollY/height));
+    const next=-28+48*Math.min(1,Math.max(0,scrollY/height));
+    if(next===angle) return;
+    angle=next;
     control.value=String(Math.round(angle)); schedule();
   },{passive:true});
   new ResizeObserver(schedule).observe(canvas);
