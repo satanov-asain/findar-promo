@@ -176,6 +176,7 @@ body, .section-dark, .section-light, .proof {
 }
 
 .hero-bg {
+  inset-inline: -4%;
   background:
     linear-gradient(90deg, #0a0b0de8 5%, #0a0b0dc7 40%, #0a0b0d15 78%),
     linear-gradient(0deg, #0a0b0d 1%, transparent 48%),
@@ -185,7 +186,7 @@ body, .section-dark, .section-light, .proof {
 
 .hero h1 {
   max-width: 16ch;
-  font-size: clamp(3.1rem, 7vw, 7rem);
+  font-size: clamp(3.1rem, 7vw, 6.5rem);
   line-height: .92;
 }
 
@@ -203,7 +204,7 @@ body, .section-dark, .section-light, .proof {
 .hero-specs {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: clamp(34px, 7vw, 102px);
+  margin-top: clamp(34px, 3.5vw, 58px);
   border: 1px solid #707479;
   background: #0d1013;
 }
@@ -258,7 +259,7 @@ body, .section-dark, .section-light, .proof {
   border: 1px solid #49535d;
 }
 
-.specimen-stage figure { max-width: 760px; margin: auto; }
+.specimen-stage figure { max-width: 760px; margin: auto; overflow: hidden; }
 .specimen-stage img { aspect-ratio: 52 / 31; object-fit: contain; }
 .compact { padding-top: 48px; }
 .project { border-block: 1px solid var(--line); }
