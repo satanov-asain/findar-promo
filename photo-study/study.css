@@ -119,3 +119,41 @@
   .inspection .study-hero {padding-top:93px}
   .findings {min-height:140px}
 }
+
+/* Keep the annotation registered to the photographed point during a close-up. */
+.photo-layer {
+  position: absolute;
+  inset: 0;
+  transform: scale(var(--zoom, 1));
+  transform-origin: var(--x, 70%) var(--y, 56%);
+}
+.image-board[data-active=toe] { --x:77%; --y:56%; --zoom:1.24 }
+.image-board[data-active=end] { --x:48%; --y:78%; --zoom:1.29 }
+.image-board .target { --x:inherit; --y:inherit; left:var(--x,70%); top:var(--y,56%) }
+.photo-glint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(115deg, transparent 40%, #ffde8f 50%, transparent 62%);
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .inspection-layout .cover-copy { animation: study-copy-in .65s ease-out both }
+  .inspection-layout .image-board { animation: study-frame-in .85s cubic-bezier(.2,.8,.2,1) both }
+  .photo-layer { transition: transform .58s cubic-bezier(.2,.8,.2,1), transform-origin .58s cubic-bezier(.2,.8,.2,1) }
+  .image-board .target { transition: left .58s cubic-bezier(.2,.8,.2,1), top .58s cubic-bezier(.2,.8,.2,1) }
+  .findings div:not([hidden]) { animation: study-copy-in .32s ease-out both }
+  .study-follow.study-in-view figure { animation: study-frame-in .75s cubic-bezier(.2,.8,.2,1) both }
+  .study-follow.study-in-view .study-follow-grid > div { animation: study-copy-in .46s .08s ease-out both }
+
+  @keyframes study-copy-in {
+    from { transform:translateY(13px); opacity:.45 }
+    to { transform:translateY(0); opacity:1 }
+  }
+  @keyframes study-frame-in {
+    from { clip-path:inset(0 0 17% 0); transform:translateY(14px); opacity:.52 }
+    to { clip-path:inset(0); transform:translateY(0); opacity:1 }
+  }
+}
