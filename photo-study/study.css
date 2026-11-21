@@ -86,7 +86,7 @@
 .inspection .study-hero h1 {max-width:8ch}
 .image-board {min-width:0;border:1px solid var(--studio-line)}
 .image-stage {position:relative;aspect-ratio:520/310;overflow:hidden;background:#454a43}
-.image-stage img {display:block;width:100%;height:100%;object-fit:cover}
+.image-stage img {display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.045)}
 .target {
   --x:70%; --y:56%;
   position:absolute;left:var(--x);top:var(--y);
