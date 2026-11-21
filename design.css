@@ -264,3 +264,71 @@ body, .section-dark, .section-light, .proof {
   .site-header, .site-header.is-compact { background: #dce5f1f5; border-bottom-color: #8399b9; }
   .process-card + .process-card { border-left: 0; }
 }
+/* Layout for the assessment programme and the two feature stories. */
+.page {overflow: clip}
+.hero-inner {z-index:auto}
+.hero .hero-actions {margin-top:24px}
+.hero .btn {box-shadow:none; font-weight:700}
+.hero .kicker,.instrument figcaption,.folio {
+  font:600 .78rem/1.4 ui-monospace,"Courier New",monospace;
+  text-transform:uppercase; letter-spacing:.12em
+}
+.hero .intro {font-size:clamp(1rem,1.45vw,1.22rem);line-height:1.55;max-width:42ch;margin:20px 0 0}
+.hero .kicker {margin:0 0 25px}
+.hero .cover-copy {min-width:0}
+section[id] {scroll-margin-top:30px}
+.program {padding:22px max(5vw,calc((100vw - 1320px)/2));border-block:1px solid currentColor}
+.program summary {font-size:clamp(1.25rem,2.8vw,2.4rem);font-weight:700;cursor:pointer;padding:12px 0}
+.program[open] .container {width:100%}
+section.testing .section-head,section.participate .section-head {text-align:left;margin-left:0}
+section.testing .positions h3 {text-align:left}
+.section-head .accent-line {margin-left:0}
+@media(max-width:620px) {
+  .hero .hero-actions .btn {width:auto;padding:13px 15px}
+  .hero .kicker {margin-bottom:12px}
+  .hero .intro {margin-top:12px}
+}
+:root {--yellow:#ff7053;--brand:#a72e1f}
+.hero.press-cover {padding:clamp(105px,13vh,145px) 0 35px;background:#f3eee5;color:#201e1b;border-bottom:0}
+.poster {display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1fr);position:relative;align-items:center;border-block:2px solid #25231f}
+.press-cover .cover-copy {padding:40px 6% 40px 0}
+.press-cover .kicker {color:#9b3224}
+.press-cover h1,.report h2,.report h3 {font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.06em}
+.press-cover h1 {font-size:clamp(4.1rem,7.6vw,8.3rem);line-height:.90;max-width:11ch;text-transform:none}
+.cover-image {height:clamp(400px,36vw,650px);overflow:hidden;background:#20201d}
+.cover-image img {width:100%;height:100%;object-fit:cover;object-position:73% 46%}
+.press-cover .secondary {color:#24221f;background:transparent;border-color:#837b71}
+.report {background:#e75c43;color:#211d19;padding:clamp(44px,6vw,105px) 0}
+.report h2 {font-size:clamp(3.2rem,7vw,7.8rem);line-height:.95;margin:0 0 40px}
+.report-grid {display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(28px,6vw,95px);align-items:start}
+.frames {display:none;position:sticky;top:12vh;height:66vh;max-height:650px;background:#f3eee5;overflow:hidden}
+.frame {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:inset(0 100% 0 0);transition:clip-path .65s cubic-bezier(.2,.75,.25,1)}
+.frame:first-child,.chapter-inline[src*="position"] {object-fit:contain;background:#ece9de}
+.frame.current {clip-path:inset(0);z-index:1}
+.chapter {padding:30px 0;border-top:1px solid #72291e}
+.chapter h3 {font-size:clamp(2.8rem,4.2vw,5rem);line-height:1;margin:12px 0}
+.chapter p {max-width:35ch;font-size:clamp(1rem,1.5vw,1.25rem);line-height:1.5}
+.chapter-inline {width:100%;height:auto;display:block;margin-bottom:20px}
+.report-grid {grid-template-columns:1fr}
+@media(min-width:751px) and (prefers-reduced-motion:no-preference) {
+  .enhanced .report-grid {grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr)}
+  .enhanced .frames {display:block}
+  .enhanced .chapter-inline {display:none}
+  .enhanced .chapter {min-height:65vh;display:flex;flex-direction:column;justify-content:center}
+}
+@media(max-width:750px) {
+  .poster {grid-template-columns:1fr}
+  .press-cover .cover-copy {padding:20px 0 24px}
+  .press-cover h1 {font-size:clamp(3.5rem,11vw,6rem);max-width:12ch}
+  .cover-image {height:clamp(220px,55vw,380px)}
+  .hero.press-cover {padding:84px 0 25px}
+  .chapter-inline {max-height:370px;object-fit:cover}
+  @supports(animation-timeline:view()) {
+    @media(prefers-reduced-motion:no-preference) {
+      .chapter-inline {animation:print-in linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+      @keyframes print-in {from {clip-path:inset(0 0 35% 0)} to {clip-path:inset(0)}}
+    }
+  }
+}
+.testing,.participate,.program {background:#f3eee5}
+.testing .process-text strong {font-family:Georgia,serif;color:#942b21;font-weight:500}
