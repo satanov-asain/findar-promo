@@ -294,7 +294,7 @@ section.testing .positions h3 {text-align:left}
 .press-cover .cover-copy {padding:40px 6% 40px 0}
 .press-cover .kicker {color:#9b3224}
 .press-cover h1,.report h2,.report h3 {font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.06em}
-.press-cover h1 {font-size:clamp(4.1rem,7.6vw,8.3rem);line-height:.90;max-width:11ch;text-transform:none}
+.press-cover h1 {font-size:clamp(3.9rem,5.75vw,6.25rem);line-height:.94;max-width:100%;text-transform:none}
 .cover-image {height:clamp(400px,36vw,650px);overflow:hidden;background:#20201d}
 .cover-image img {width:100%;height:100%;object-fit:cover;object-position:73% 46%}
 .press-cover .secondary {color:#24221f;background:transparent;border-color:#837b71}
