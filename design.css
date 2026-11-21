@@ -286,3 +286,68 @@ body, .section-dark, .section-light, .proof {
   .hero-specs span { overflow-wrap: anywhere; }
   .site-header, .site-header.is-compact { background: #21272dee; }
 }
+/* Layout for the assessment programme and the two feature stories. */
+.page {overflow: clip}
+.hero-inner {z-index:auto}
+.hero .hero-actions {margin-top:24px}
+.hero .btn {box-shadow:none; font-weight:700}
+.hero .kicker,.instrument figcaption,.folio {
+  font:600 .78rem/1.4 ui-monospace,"Courier New",monospace;
+  text-transform:uppercase; letter-spacing:.12em
+}
+.hero .intro {font-size:clamp(1rem,1.45vw,1.22rem);line-height:1.55;max-width:42ch;margin:20px 0 0}
+.hero .kicker {margin:0 0 25px}
+.hero .cover-copy {min-width:0}
+section[id] {scroll-margin-top:30px}
+.program {padding:22px max(5vw,calc((100vw - 1320px)/2));border-block:1px solid currentColor}
+.program summary {font-size:clamp(1.25rem,2.8vw,2.4rem);font-weight:700;cursor:pointer;padding:12px 0}
+.program[open] .container {width:100%}
+section.testing .section-head,section.participate .section-head {text-align:left;margin-left:0}
+section.testing .positions h3 {text-align:left}
+.section-head .accent-line {margin-left:0}
+@media(max-width:620px) {
+  .hero .hero-actions .btn {width:auto;padding:13px 15px}
+  .hero .kicker {margin-bottom:12px}
+  .hero .intro {margin-top:12px}
+}
+:root {--yellow:#d5ff62}
+.hero.lab-cover {background:#14191b;padding:clamp(110px,13vh,155px) 0 45px;border-bottom:1px solid #5d6b66;overflow:visible}
+.lab-grid {display:grid;grid-template-columns: minmax(0, .79fr) minmax(0,1.21fr);align-items:center;gap:clamp(24px,5vw,85px)}
+.lab-cover .kicker {color:var(--yellow)}
+.lab-cover h1 {max-width:8ch;font-size:clamp(4rem,7.9vw,8.5rem);text-transform:none;line-height:.86;letter-spacing:-.065em}
+.lab-cover .intro {color:#c3cfcb}
+.lab-cover .secondary {background:transparent;border-color:#6a746f}
+.instrument {margin:0;min-width:0;background:#22292b;border:1px solid #718078;position:relative}
+.instrument figcaption,.orbit {display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;color:#d5dfd9;background:#1c2324}
+.instrument figcaption b {color:var(--yellow)}
+.model-window {
+  height:clamp(270px,31vw,510px);position:relative;overflow:hidden;
+  background-color:#262e30;
+  background-image:linear-gradient(#b4dabe12 1px,transparent 1px),linear-gradient(90deg,#b4dabe12 1px,transparent 1px);
+  background-size:24px 24px
+}
+.model-window::after {content:'';position:absolute;inset:10px;pointer-events:none;border:1px solid #acbdb638}
+.model-window canvas,.model-window img {width:100%;height:100%;object-fit:contain;display:block}
+.model-window [hidden],.orbit[hidden]{display:none}
+.orbit {font: .85rem/1.3 ui-monospace,monospace;border-top:1px solid #59645d}
+.orbit input {accent-color:var(--yellow);min-width:40px;flex:1;cursor:pointer}
+.orbit output {min-width:4ch;text-align:right;color:var(--yellow)}
+.lab-cover + .proof {background:#dce2df;color:#17221d}
+.proof-head p {color:#36423c}
+.proof-switch button[aria-pressed=true] {background:#243527;color:#e3ff8c}
+.specimen-stage {background:#303838}
+.testing {background:#121819}
+.process-cards {gap:0;border-top:1px solid #748478;border-bottom:1px solid #748478}
+.process-card {border:0;min-height:0}
+.process-card + .process-card {border-left:1px solid #58665c}
+.positions {border:0;padding-inline:0}
+@media(max-width:850px) {
+  .lab-grid {grid-template-columns:1fr}
+  .lab-cover h1 {max-width:none;font-size:clamp(3.7rem,9vw,6rem)}
+  .model-window {height:clamp(195px,48vw,370px)}
+}
+@media(max-width:620px) {
+  .hero.lab-cover {padding:84px 0 24px}
+  .lab-grid {gap:20px}
+  .orbit {flex-wrap:wrap;padding:10px}
+}

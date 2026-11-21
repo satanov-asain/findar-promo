@@ -9,13 +9,11 @@
   <link rel="stylesheet" href="styles-desktop.css" media="(min-width: 621px)" />
   <link rel="stylesheet" href="styles-mobile.css" media="(max-width: 620px)" />
   <link rel="stylesheet" href="design.css" />
+  <script defer src="motion.js"></script>
 </head>
 <body>
   <main class="page">
-    <section class="hero section-dark">
-      <div class="hero-bg"></div>
-      <div class="container hero-inner">
-        <div class="site-header" id="siteHeader">
+<section class="hero lab-cover"><div class="container hero-inner">        <div class="site-header" id="siteHeader">
           <div class="logo-card"><img src="assets/findar-logo.png" alt="FINDAR"></div>
           <div class="lang-switch" aria-label="Выбор языка">
             <button type="button" data-lang="kk">KZ</button>
@@ -24,21 +22,13 @@
             <button type="button" data-lang="en">EN</button>
           </div>
         </div>
-        <div class="eyebrow">Международный пилотный проект в Казахстане</div>
-        <h1>Практическое тестирование сварщиков</h1>
-        <p class="lead">Оценка профессиональных навыков с ориентацией на международные требования, современные производственные стандарты и дальнейшее развитие специалиста.</p>
-        <div class="hero-actions">
-          <a class="btn primary wa-link hero-wa" href="#participate">Записаться через WhatsApp</a>
-          <a class="btn secondary" href="#testing">Как проходит тестирование</a>
-        </div>
-        <div class="hero-specs">
-          <a href="#testing"><strong>135 / 136</strong><span>Процессы сварки</span></a>
-          <a href="#quality"><strong>VT / UT / PT</strong><span>Контроль качества</span></a>
-          <a href="#positions"><strong>PF</strong><span>Положения сварки</span></a>
-        </div>
-      </div>
-    </section>
-
+        <div class="lab-grid"><div class="cover-copy"><p class="kicker">Лаборатория сварки</p>
+        <h1>Шов в разрезе</h1><p class="intro">Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.</p><div class="hero-actions"><a class="btn primary hero-wa wa-link" href="#participate">Записаться через WhatsApp</a><a class="btn secondary" href="#about">Смотреть образцы</a></div></div>
+        <figure class="instrument">
+        <figcaption><span>Тавровое соединение</span><b>FW</b></figcaption>
+        <div class="model-window"><img id="model-fallback" src="assets/work-5.jpg" alt=""><canvas id="joint" aria-hidden="true" hidden></canvas></div>
+        <label class="orbit" hidden><span>Повернуть модель</span><input id="orbit" type="range" min="-60" max="60" value="-28"><output for="orbit">−28°</output></label>
+        </figure></div></div></section>
     <section class="proof" id="about">
       <div class="container">
         <div class="proof-head">
@@ -55,48 +45,6 @@
           <figure id="weld-section" aria-labelledby="select-section" hidden>
             <img src="assets/work-5.jpg" width="520" height="310" alt="" loading="lazy">
           </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-light compact">
-      <div class="container two-col">
-        <div class="card">
-          <h3>Чем мы занимаемся</h3>
-          <p>FINDAR помогает сварщикам подготовиться к работе в проектах, где важны качество, дисциплина, стабильность выполнения шва и понимание технических требований.</p>
-          <ul class="check-list">
-            <li>практические навыки сварки;</li>
-            <li>качество сварных соединений;</li>
-            <li>соблюдение требований безопасности;</li>
-            <li>умение работать по заданию;</li>
-            <li>понимание производственных стандартов;</li>
-            <li>готовность к работе по международным требованиям.</li>
-          </ul>
-        </div>
-        <div class="card dark-card">
-          <h3>Наши преимущества</h3>
-          <div class="adv-grid">
-            <div><b>Практический формат</b><span>Реальные сварочные задания вместо формальной анкеты.</span></div>
-            <div><b>Международные требования</b><span>Подходы, близкие к европейской и международной практике.</span></div>
-            <div><b>Обратная связь</b><span>Понятный разбор результата, ошибок и зон развития.</span></div>
-            <div><b>Контроль качества</b><span>VT, UT, PT.</span></div>
-            <div><b>Видеоанализ</b><span>Разбор техники, положения горелки и стабильности движения.</span></div>
-            <div><b>Развитие</b><span>Ориентир для профессионального роста и подготовки.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-dark project" id="project">
-      <div class="container">
-        <div class="section-head light">
-          <h2>Международный пилотный проект для сварщиков в Казахстане</h2>
-          <p><span class="brand-blue">FINDAR</span> запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.</p>
-        </div>
-        <div class="card project-card">
-          <p>Мы приглашаем сварщиков принять участие в практическом мероприятии, где участники смогут проверить свой уровень, выполнить сварочные задания по производственным требованиям и получить профессиональную обратную связь от специалистов.</p>
-          <p>Проект направлен не только на оценку текущих навыков, но и на дальнейшее развитие сварщиков: понимание требований безопасности, качества сварных соединений, чтения технических заданий, работы по современным производственным стандартам и подготовки к международной практике.</p>
-          <p>Лучшие участники смогут быть рассмотрены для дальнейших этапов проекта, профессионального обмена опытом, дополнительной подготовки и участия в международных программах развития.</p>
         </div>
       </div>
     </section>
@@ -141,6 +89,48 @@
       </div>
     </section>
 
+<details class="program"><summary>О программе FINDAR</summary>    <section class="section-light compact">
+      <div class="container two-col">
+        <div class="card">
+          <h3>Чем мы занимаемся</h3>
+          <p>FINDAR помогает сварщикам подготовиться к работе в проектах, где важны качество, дисциплина, стабильность выполнения шва и понимание технических требований.</p>
+          <ul class="check-list">
+            <li>практические навыки сварки;</li>
+            <li>качество сварных соединений;</li>
+            <li>соблюдение требований безопасности;</li>
+            <li>умение работать по заданию;</li>
+            <li>понимание производственных стандартов;</li>
+            <li>готовность к работе по международным требованиям.</li>
+          </ul>
+        </div>
+        <div class="card dark-card">
+          <h3>Наши преимущества</h3>
+          <div class="adv-grid">
+            <div><b>Практический формат</b><span>Реальные сварочные задания вместо формальной анкеты.</span></div>
+            <div><b>Международные требования</b><span>Подходы, близкие к европейской и международной практике.</span></div>
+            <div><b>Обратная связь</b><span>Понятный разбор результата, ошибок и зон развития.</span></div>
+            <div><b>Контроль качества</b><span>VT, UT, PT.</span></div>
+            <div><b>Видеоанализ</b><span>Разбор техники, положения горелки и стабильности движения.</span></div>
+            <div><b>Развитие</b><span>Ориентир для профессионального роста и подготовки.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark project" id="project">
+      <div class="container">
+        <div class="section-head light">
+          <h2>Международный пилотный проект для сварщиков в Казахстане</h2>
+          <p><span class="brand-blue">FINDAR</span> запускает международный пилотный проект по оценке и развитию квалификации сварщиков в Казахстане.</p>
+        </div>
+        <div class="card project-card">
+          <p>Мы приглашаем сварщиков принять участие в практическом мероприятии, где участники смогут проверить свой уровень, выполнить сварочные задания по производственным требованиям и получить профессиональную обратную связь от специалистов.</p>
+          <p>Проект направлен не только на оценку текущих навыков, но и на дальнейшее развитие сварщиков: понимание требований безопасности, качества сварных соединений, чтения технических заданий, работы по современным производственным стандартам и подготовки к международной практике.</p>
+          <p>Лучшие участники смогут быть рассмотрены для дальнейших этапов проекта, профессионального обмена опытом, дополнительной подготовки и участия в международных программах развития.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section-light included">
       <div class="container">
         <div class="section-head"><div class="accent-line"></div><h2>Что входит в проект</h2></div>
@@ -163,7 +153,7 @@
       </div>
     </section>
 
-    <section class="section-light participate" id="participate">
+</details>    <section class="section-light participate" id="participate">
       <div class="container">
         <div class="section-head"><div class="accent-line"></div><h2>Как принять участие</h2><p>Чтобы подать заявку, необходимо пройти короткий предварительный отбор.</p></div>
         <div class="participate-layout">
@@ -276,6 +266,10 @@
         });
       });
 
+      Object.assign(translations.ru, {"Лаборатория сварки": "Лаборатория сварки", "Шов в разрезе": "Шов в разрезе", "Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.": "Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.", "Тавровое соединение": "Тавровое соединение", "Повернуть модель": "Повернуть модель", "Смотреть образцы": "Смотреть образцы", "Из мастерской": "Из мастерской", "За сварочной маской": "За сварочной маской", "Как проходит практическое испытание сварщика в FINDAR, от задания до разбора шва.": "Как проходит практическое испытание сварщика в FINDAR, от задания до разбора шва.", "Ход испытания": "Ход испытания", "Задание": "Задание", "Сварка": "Сварка", "Разбор шва": "Разбор шва", "Сварщик знакомится с заданием, типом соединения и положением сварки.": "Сварщик знакомится с заданием, типом соединения и положением сварки.", "На посту участник выполняет соединение. Специалист наблюдает за техникой и стабильностью движения горелки.": "На посту участник выполняет соединение. Специалист наблюдает за техникой и стабильностью движения горелки.", "Готовый образец осматривают. Участнику показывают результат и объясняют, над чем поработать.": "Готовый образец осматривают. Участнику показывают результат и объясняют, над чем поработать.", "О программе FINDAR": "О программе FINDAR"});
+      Object.assign(translations.en, {"Лаборатория сварки": "Welding laboratory", "Шов в разрезе": "Inside the weld", "Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.": "Explore the joint from every angle. At FINDAR, welders complete a practical test and receive feedback on their work.", "Тавровое соединение": "T-joint", "Повернуть модель": "Rotate the model", "Смотреть образцы": "View samples", "Из мастерской": "From the workshop", "За сварочной маской": "Behind the welding mask", "Как проходит практическое испытание сварщика в FINDAR, от задания до разбора шва.": "Follow a FINDAR welding test from the brief to the weld review.", "Ход испытания": "Inside the test", "Задание": "The brief", "Сварка": "Welding", "Разбор шва": "Weld review", "Сварщик знакомится с заданием, типом соединения и положением сварки.": "The welder reviews the brief, joint type and welding position.", "На посту участник выполняет соединение. Специалист наблюдает за техникой и стабильностью движения горелки.": "At the station, the welder makes the joint while the assessor observes technique and torch travel.", "Готовый образец осматривают. Участнику показывают результат и объясняют, над чем поработать.": "The assessor inspects the sample and discusses the result and areas for improvement.", "О программе FINDAR": "About the FINDAR programme"});
+      Object.assign(translations.kk, {"Лаборатория сварки": "Дәнекерлеу зертханасы", "Шов в разрезе": "Жіктің қимасы", "Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.": "Қосылысты әр жағынан қараңыз. FINDAR шеберханасында дәнекерлеушілер тапсырма орындап, жұмысы бойынша пікір алады.", "Тавровое соединение": "Таврлы қосылыс", "Повернуть модель": "Үлгіні бұру", "Смотреть образцы": "Үлгілерді көру", "Из мастерской": "Шеберханадан", "За сварочной маской": "Дәнекерлеуші маскасының ар жағында", "Как проходит практическое испытание сварщика в FINDAR, от задания до разбора шва.": "FINDAR орталығындағы сынақтың тапсырмадан жікті талдауға дейінгі кезеңдері.", "Ход испытания": "Сынақ барысы", "Задание": "Тапсырма", "Сварка": "Дәнекерлеу", "Разбор шва": "Жікті талдау", "Сварщик знакомится с заданием, типом соединения и положением сварки.": "Дәнекерлеуші тапсырмамен, қосылыс түрімен және дәнекерлеу қалпымен танысады.", "На посту участник выполняет соединение. Специалист наблюдает за техникой и стабильностью движения горелки.": "Қатысушы қосылысты орындайды. Маман дәнекерлеу техникасы мен жанарғы қозғалысын бақылайды.", "Готовый образец осматривают. Участнику показывают результат и объясняют, над чем поработать.": "Маман дайын үлгіні қарап, нәтижені түсіндіреді және нені жақсартуға болатынын көрсетеді.", "О программе FINDAR": "FINDAR бағдарламасы туралы"});
+      Object.assign(translations.fi, {"Лаборатория сварки": "Hitsauslaboratorio", "Шов в разрезе": "Hitsin poikkileikkaus", "Рассмотрите соединение со всех сторон. В мастерской FINDAR сварщики выполняют практическое задание и получают разбор результата.": "Tutki liitosta eri kulmista. FINDARin työpajassa hitsaajat tekevät käytännön tehtävän ja saavat palautetta.", "Тавровое соединение": "T-liitos", "Повернуть модель": "Kierrä mallia", "Смотреть образцы": "Katso näytteet", "Из мастерской": "Työpajalta", "За сварочной маской": "Hitsausmaskin takana", "Как проходит практическое испытание сварщика в FINDAR, от задания до разбора шва.": "Seuraa FINDARin hitsauskoetta tehtävänannosta hitsin arviointiin.", "Ход испытания": "Kokeen kulku", "Задание": "Tehtävä", "Сварка": "Hitsaus", "Разбор шва": "Hitsin arviointi", "Сварщик знакомится с заданием, типом соединения и положением сварки.": "Hitsaaja tutustuu tehtävään, liitostyyppiin ja hitsausasentoon.", "На посту участник выполняет соединение. Специалист наблюдает за техникой и стабильностью движения горелки.": "Hitsaaja tekee liitoksen. Arvioija seuraa tekniikkaa ja polttimen liikettä.", "Готовый образец осматривают. Участнику показывают результат и объясняют, над чем поработать.": "Arvioija tarkastaa näytteen ja kertoo, missä hitsaaja voi vielä kehittyä.", "О программе FINDAR": "Tietoa FINDAR-ohjelmasta"});
       const originalText = new WeakMap();
       function rememberTextNodes(root) {
         const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
