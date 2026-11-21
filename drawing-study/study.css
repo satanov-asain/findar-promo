@@ -1,0 +1,129 @@
+.study-page {--studio-line:#7d877d}
+.study-hero .study-type {
+  margin: 0 0 15px;
+  font: 700 .83rem/1.2 ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+}
+.study-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3.4rem, 7vw, 7.6rem);
+  line-height: .9;
+  letter-spacing: -.055em;
+  text-transform: none;
+  overflow-wrap: break-word;
+}
+.study-hero .study-intro {
+  max-width: 36ch;
+  margin: 22px 0 0;
+  font-size: clamp(1.05rem,1.5vw,1.23rem);
+  line-height: 1.52;
+}
+.study-controls {
+  display: flex;
+  gap: 1px;
+  background: var(--studio-line);
+}
+.study-controls button {
+  flex: 1;
+  min-height: 48px;
+  padding: 10px;
+  background: var(--studio-panel);
+  color: var(--studio-ink);
+  font: 600 .92rem/1.3 Arial, sans-serif;
+  border: 0;
+  cursor: pointer;
+}
+.study-controls button[aria-pressed=true] {background:var(--studio-accent);color:#111}
+.study-controls button:focus-visible, .spec-list button:focus-visible {
+  position: relative;
+  z-index: 2;
+  outline-offset: -4px;
+}
+.study-follow {padding:clamp(45px,7vw,110px) 0}
+.study-follow-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-items:center;
+  gap:clamp(24px,6vw,110px);
+}
+.study-follow figure {margin:0}
+.study-follow img {display:block;width:100%;height:auto}
+.study-follow figcaption {margin-top:12px}
+.study-follow h2 {font-size:clamp(2rem,4.8vw,4.9rem);line-height:1;letter-spacing:-.045em;margin:0 0 18px}
+.study-follow p {max-width:46ch;font-size:clamp(1rem,1.6vw,1.24rem);line-height:1.6;margin:0}
+.study-page [hidden] {display:none!important}
+@media(max-width:760px) {
+  .study-follow-grid {grid-template-columns:1fr}
+  .study-hero h1 {font-size:clamp(2.9rem,11vw,5.1rem)}
+  .study-hero .study-intro {margin-top:15px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .study-page .target,.study-page .drawing-illustration img,.study-page .task-detail p {animation:none;transition:none}
+}
+.drawing {
+  --yellow:#ffcf54;
+  --studio-accent:#c8dcff;
+  --studio-panel:#f4f7fe;
+  --studio-line:#98abd1;
+  --studio-ink:#183768;
+}
+.drawing .study-hero {
+  padding:clamp(103px,12vh,145px) 0 clamp(32px,5vw,72px);
+  color:var(--studio-ink);
+  background:
+    linear-gradient(#5281c417 1px,transparent 1px),
+    linear-gradient(90deg,#5281c417 1px,transparent 1px),
+    #dfe8fa;
+  background-size:24px 24px;
+}
+.drawing-heading {
+  display:flex;align-items:end;justify-content:space-between;
+  flex-wrap:wrap;gap:14px 45px;margin:0 0 30px
+}
+.drawing .study-type {color:#345b9d}
+.drawing .study-hero h1 {max-width:19ch}
+.drawing .study-hero .study-intro {max-width:47ch}
+.drawing .study-hero .secondary {color:#12346e;border-color:#617fb3;background:#f8faff}
+.drawing-layout {
+  display:grid;grid-template-columns:minmax(0,1.32fr) minmax(0,1fr);
+  border:1px solid #7890bc;background:#f7f9ff
+}
+.drawing-paper {margin:0;border-right:1px solid var(--studio-line)}
+.drawing-illustration {aspect-ratio:1302/868;background:white}
+.drawing-illustration img {width:100%;height:100%;object-fit:contain;display:block}
+.drawing-illustration img:not([hidden]) {animation:plate-in .22s ease both}
+@keyframes plate-in {from {opacity:.35;transform:translateY(4px)} to {opacity:1;transform:none}}
+.drawing-paper figcaption {border-top:1px solid var(--studio-line);padding:13px 16px;font-weight:600}
+.drawing-sheet {display:flex;flex-direction:column;justify-content:center;padding:clamp(15px,3vw,55px)}
+.spec-list {list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.spec-list li {min-width:0;display:grid;gap:8px;text-align:center}
+.spec-list button {
+  border:1px solid #6885b9;
+  background:#e9effc;
+  color:#14396f;
+  cursor:pointer;
+  padding:14px 2px;
+  font:600 clamp(1.2rem,2.8vw,3rem)/1 ui-monospace,monospace;
+}
+.spec-list button[aria-pressed=true] {background:#183768;color:#fff}
+.spec-list li span {overflow-wrap:anywhere}
+.task-detail {
+  border-top:1px solid var(--studio-line);
+  padding-top:22px;
+  margin-top:26px;
+  min-height:4rem;
+}
+.task-detail p {font-size:clamp(1.1rem,2vw,1.75rem);margin:0;line-height:1.25}
+.task-detail p:not([hidden]) {animation:plate-in .22s ease both}
+.drawing .study-follow {background:#1c3e74;color:#fff}
+@media(max-width:760px) {
+  .drawing-layout {grid-template-columns:1fr}
+  .drawing-paper {border-right:0;border-bottom:1px solid var(--studio-line)}
+  .drawing .study-hero {padding-top:92px}
+  .drawing-heading {gap:1px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .drawing .drawing-illustration img:not([hidden]),.drawing .task-detail p:not([hidden]) {animation:none}
+}
