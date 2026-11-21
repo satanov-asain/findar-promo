@@ -127,3 +127,8 @@
 @media(prefers-reduced-motion:reduce) {
   .drawing .drawing-illustration img:not([hidden]),.drawing .task-detail p:not([hidden]) {animation:none}
 }
+.drawing-paper {display:flex;flex-direction:column}
+.drawing-paper figcaption {order:-2;border-top:0}
+.drawing-paper .study-controls {order:-1;border-bottom:1px solid var(--studio-line)}
+.drawing .study-follow figure {overflow:hidden}
+.drawing .study-follow img {transform:scale(1.2);transform-origin:76% 50%}
