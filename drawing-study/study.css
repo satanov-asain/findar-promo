@@ -132,3 +132,47 @@
 .drawing-paper .study-controls {order:-1;border-bottom:1px solid var(--studio-line)}
 .drawing .study-follow figure {overflow:hidden}
 .drawing .study-follow img {transform:scale(1.2);transform-origin:76% 50%}
+
+/* Reveal the source illustration and guide the eye to the selected designation. */
+.drawing-illustration { position: relative; overflow: hidden }
+.drafting-guide {
+  position: absolute;
+  inset: 7%;
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+.drafting-guide::before,
+.drafting-guide::after {
+  content:"";
+  position:absolute;
+  background:#18498c;
+  opacity:.56;
+}
+.drafting-guide::before { left:0; right:0; bottom:4%; height:1px; transform-origin:left }
+.drafting-guide::after { top:8%; bottom:4%; right:3%; width:1px; transform-origin:bottom }
+.drawing-layout[data-focus="135"] .drafting-guide::after,
+.drawing-layout[data-focus="PF"] .drafting-guide::before { opacity:0 }
+.drawing-layout[data-focus="PF"] .drafting-guide::after { width:2px }
+.drawing-illustration img:not([hidden]) { animation:none }
+
+@media(prefers-reduced-motion:no-preference) {
+  .drawing-heading { animation: drafting-copy .55s ease-out both }
+  .drawing-illustration img:not([hidden]) { animation: drafting-plate .68s cubic-bezier(.2,.8,.2,1) both }
+  .spec-list button { transition: background .18s ease, color .18s ease, transform .18s ease }
+  .spec-list button[aria-pressed=true] { transform:translateY(-3px) }
+  .drawing .study-follow.study-in-view img { animation: drafting-photo .78s cubic-bezier(.2,.8,.2,1) both }
+  .drawing .study-follow.study-in-view .study-follow-grid > div { animation: drafting-copy .5s ease-out both }
+
+  @keyframes drafting-plate {
+    from { clip-path:inset(0 55% 0 0); opacity:.35 }
+    to { clip-path:inset(0); opacity:1 }
+  }
+  @keyframes drafting-photo {
+    from { clip-path:inset(8% 0 8% 0); opacity:.5 }
+    to { clip-path:inset(0); opacity:1 }
+  }
+  @keyframes drafting-copy {
+    from { transform:translateY(13px); opacity:.45 }
+    to { transform:translateY(0); opacity:1 }
+  }
+}
