@@ -281,7 +281,8 @@ body, .section-dark, .section-light, .proof {
   }
   .hero h1 { font-size: clamp(2.4rem, 9.6vw, 4.5rem); }
   .hero-specs { margin-top: 26px; }
-  .hero-specs a { padding-inline: 9px; }
+  .hero-specs a { padding-inline: 7px; }
+  .hero-specs strong { font-size: clamp(.66rem, 3.15vw, .95rem); white-space: nowrap; }
   .hero-specs span { overflow-wrap: anywhere; }
   .site-header, .site-header.is-compact { background: #21272dee; }
 }
